@@ -4,6 +4,9 @@ kind: Deployment
 metadata:
   labels:
     app: targylyen-app
+  annotations:
+    notifications.argoproj.io/subscribe.on-deployed.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: notifications_targylyen
   name: targylyen-app
 spec:
   replicas: 1
