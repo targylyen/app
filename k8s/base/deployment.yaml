@@ -18,12 +18,16 @@ spec:
         app: targylyen-nginx
     spec:
       containers:
-      - image: nginx
-        name: nginx      
+      - image: nginx:latest
+        name: nginx
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 5m   
       - command:
         - "/bin/sleep"
         - "infinity"
-        image: busybox
+        image: busybox:latest
         name: busybox
         resources:
           requests:
