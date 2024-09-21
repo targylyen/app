@@ -3,9 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: targylyen-nginx
-  name: targylyen-nginx
-  namespace: default
+    app: targylyen-app
+  name: targylyen-app
 spec:
   replicas: 1
   selector:
@@ -15,7 +14,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: targylyen-nginx
+        app: targylyen-app
     spec:
       containers:
       - image: nginx:latest
