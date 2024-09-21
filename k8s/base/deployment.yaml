@@ -20,7 +20,7 @@ spec:
         app: targylyen-app
     spec:
       containers:
-      - image: nginx:latest
+      - image: nginx:alpine
         name: nginx
         resources:
           requests:
