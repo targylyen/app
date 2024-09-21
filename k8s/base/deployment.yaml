@@ -19,5 +19,14 @@ spec:
     spec:
       containers:
       - image: nginx
-        name: nginx
+        name: nginx      
+      - command:
+        - "/bin/sleep"
+        - "infinity"
+      image: busybox
+      name: busybox
+      resources:
+        requests:
+          memory: 32Mi
+          cpu: 5m
 ---
