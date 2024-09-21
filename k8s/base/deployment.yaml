@@ -15,7 +15,6 @@ spec:
       app: targylyen-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: targylyen-app
     spec:
@@ -29,7 +28,7 @@ spec:
       - command:
         - "/bin/sleep"
         - "infinity"
-        image: busybox:latest
+        image: busybox
         name: busybox
         resources:
           requests:
