@@ -9,7 +9,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: targylyen-nginx
+      app: targylyen-app
   template:
     metadata:
       creationTimestamp: null
