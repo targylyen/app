@@ -2,6 +2,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    notifications.argoproj.io/subscribe.on-created.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-deleted.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-deployed.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-health-degraded.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-sync-failed.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-sync-running.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-sync-status-unknown: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: notifications_targylyen
   labels:
     app: targylyen-app
   name: targylyen-app
