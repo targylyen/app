@@ -2,6 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: targylyen-nginx
+  annotations:
+    notifications.argoproj.io/subscribe.on-rollout-step-completed.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-rollout-updated.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-rollout-completed.slack: notifications_targylyen
+    notifications.argoproj.io/subscribe.on-rollout-aborted.slack: notifications_targylyen
 spec:
   replicas: 1
   strategy:
